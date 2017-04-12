@@ -1,0 +1,18 @@
+<template>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <p>Catchy title, huh?</p>
+    <p>This issue, affecting IE11, occurs where a user organically navigates to a page they've previously visited and <strong><em>window.history.state</em></strong> contains data from their previous visit.<br />
+      The correct behaviour, considering this should be a new entry in <strong><em>window.history</em></strong>, is that <strong><em>window.history.state</em></strong> is empty</p>
+    <p>To replicate this Issue;</p>
+      <ol>
+        <li>Click the below "Store Data" link to store data in <strong><em>window.history.state</em></strong></li>
+        <li>Click "Github Users" in the Main Navigation</li>
+        <li>Click "Welcome" in the Main Navigation to load this page again</li>
+        <li>Click the below "See Data" link to see the data stored in <strong><em>window.history.state</em></strong> in your browser console.</li>
+      </ol>
+      <p><strong>Correct functionality after performing the above steps is to see <em>null</em> in the console.</strong></p>
+      <p><a href="#" click.delegate="saveData()">Save Data</a></p>
+      <p><a href="#" click.delegate="seeData()">See Data</a></p>
+  </section>
+</template>
